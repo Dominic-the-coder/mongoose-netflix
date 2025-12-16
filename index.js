@@ -41,7 +41,6 @@ app.get("/shows", async (req, res) => {
     res.json(shows);
 });
 
-
 app.put("/shows/:id", async (req, res) => {
     const updatedShow = await TVShow.findByIdAndUpdate(req.params.id, req.body)
     res.json(updatedShow)
